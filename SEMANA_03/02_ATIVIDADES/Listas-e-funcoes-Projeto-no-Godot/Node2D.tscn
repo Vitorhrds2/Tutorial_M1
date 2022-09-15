@@ -1,0 +1,120 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Lista.gd" type="Script" id=1]
+[ext_resource path="res://Instrucao.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -184, -80 )
+scale = Vector2( 0.962005, 0.932996 )
+script = ExtResource( 1 )
+
+[node name="Instrucao" type="Button" parent="."]
+visible = false
+margin_left = 397.93
+margin_top = 564.483
+margin_right = 620.93
+margin_bottom = 707.483
+text = "Instrucao"
+script = ExtResource( 2 )
+
+[node name="EnviarDados" type="Button" parent="."]
+margin_left = 515.59
+margin_top = 565.919
+margin_right = 738.59
+margin_bottom = 708.919
+text = "Enviar Dados"
+
+[node name="FuncaoTexto" type="Button" parent="."]
+margin_left = 773.073
+margin_top = 565.919
+margin_right = 996.076
+margin_bottom = 708.919
+text = "Apagar"
+
+[node name="EnviarPFuncao" type="Button" parent="."]
+margin_left = 1018.86
+margin_top = 565.919
+margin_right = 1241.86
+margin_bottom = 708.919
+text = "Enviar Dados com Seguranca"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 550.0
+margin_top = 129.0
+margin_right = 1216.0
+margin_bottom = 253.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Infos" type="Label" parent="ColorRect"]
+margin_top = -80.0
+margin_right = 667.0
+margin_bottom = 129.0
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+valign = 1
+
+[node name="Resultado" type="Label" parent="ColorRect"]
+margin_left = 0.0793457
+margin_top = -23.1594
+margin_right = 667.079
+margin_bottom = 185.841
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+valign = 1
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 573.0
+margin_top = 412.0
+margin_right = 1182.0
+margin_bottom = 518.0
+hint_tooltip = "
+"
+color = Color( 0.419608, 0.419608, 0.419608, 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="ColorRect2"]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_scale = Vector2( 0.7, 0.7 )
+text = "E-mail"
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 573.0
+margin_top = 282.0
+margin_right = 1181.0
+margin_bottom = 388.0
+color = Color( 0.419608, 0.419608, 0.419608, 1 )
+
+[node name="Label" type="Label" parent="ColorRect3"]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_scale = Vector2( 0.7, 0.7 )
+text = "Nome"
+
+[node name="EditNome" type="LineEdit" parent="."]
+modulate = Color( 0.298039, 0.298039, 0.298039, 1 )
+margin_left = 585.191
+margin_top = 294.002
+margin_right = 1170.19
+margin_bottom = 376.002
+custom_colors/clear_button_color_pressed = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+
+[node name="EditEmail" type="LineEdit" parent="."]
+modulate = Color( 0.298039, 0.298039, 0.298039, 1 )
+margin_left = 585.191
+margin_top = 423.362
+margin_right = 1170.19
+margin_bottom = 505.362
+custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+
+[connection signal="pressed" from="Instrucao" to="." method="_on_Instrucao_pressed"]
+[connection signal="pressed" from="EnviarDados" to="." method="_on_EnviarDados_pressed"]
+[connection signal="pressed" from="FuncaoTexto" to="." method="_on_FuncaoTexto_pressed"]
+[connection signal="pressed" from="EnviarPFuncao" to="." method="_on_EnviarPFuncao_pressed"]
